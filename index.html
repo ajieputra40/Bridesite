@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bridesite</title>
+  <style>
+    :root {
+      --bg: #f7f3ee;
+      --card: #ffffff;
+      --text: #2f2927;
+      --muted: #7e736d;
+      --accent: #735d53;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: "Poppins", "Segoe UI", sans-serif;
+      background: linear-gradient(180deg, #f3ece4 0%, var(--bg) 45%, #f9f6f2 100%);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 840px;
+      margin: 0 auto;
+      padding: 28px 18px 40px;
+    }
+
+    .hero {
+      background: var(--card);
+      border-radius: 18px;
+      padding: 24px 20px;
+      box-shadow: 0 10px 35px rgba(43, 33, 27, 0.08);
+      border: 1px solid #eee3d8;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 32px;
+      line-height: 1.1;
+      letter-spacing: -0.5px;
+    }
+
+    p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.6;
+      font-size: 14px;
+    }
+
+    .section-title {
+      margin: 24px 0 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    a.card {
+      display: block;
+      text-decoration: none;
+      background: var(--card);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 14px 16px;
+      border: 1px solid #eee3d8;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    a.card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(43, 33, 27, 0.08);
+    }
+
+    .name {
+      font-weight: 600;
+      font-size: 15px;
+    }
+
+    .path {
+      margin-top: 4px;
+      font-size: 12px;
+      color: var(--muted);
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+  </style>
+</head>
+<body>
+  <main class="wrap">
+    <section class="hero">
+      <h1>Bridesite</h1>
+      <p>Wedding invitation web workspace. Use the links below to open active templates and clients quickly.</p>
+    </section>
+
+    <h2 class="section-title">Clients</h2>
+    <section class="grid">
+      <a class="card" href="clients/ajie-gladys-motion/index.html">
+        <div class="name">Ajie & Gladys Motion</div>
+        <div class="path">clients/ajie-gladys-motion/index.html</div>
+      </a>
+      <a class="card" href="clients/selpi-zein-motion/index.html">
+        <div class="name">Selpi & Zein Motion</div>
+        <div class="path">clients/selpi-zein-motion/index.html</div>
+      </a>
+    </section>
+
+    <h2 class="section-title">Templates</h2>
+    <section class="grid">
+      <a class="card" href="templates/template-motion-art-1/index.html">
+        <div class="name">Template Motion Art 1</div>
+        <div class="path">templates/template-motion-art-1/index.html</div>
+      </a>
+      <a class="card" href="templates/template-netflix/index.html">
+        <div class="name">Template Netflix</div>
+        <div class="path">templates/template-netflix/index.html</div>
+      </a>
+    </section>
+  </main>
+</body>
+</html>
