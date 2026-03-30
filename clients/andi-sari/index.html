@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wedding Invitation</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<section class="hero">
+  <h1 id="couple"></h1>
+  <p id="date"></p>
+  <p id="venue"></p>
+</section>
+
+<section class="countdown">
+  <h2>Countdown</h2>
+  <div id="timer"></div>
+</section>
+
+<a id="wa" target="_blank">RSVP via WhatsApp</a>
+
+<script src="script.js"></script>
+<script src="../../shared/countdown.js"></script>
+<script src="../../shared/music.js"></script>
+<script>
+  initMusic("assets/music.mp3");
+  renderMusicButton();
+</script>
+<script src="../../shared/utils.js"></script>
+<script>
+  renderGuestName("guest");
+
+  const waLink = generateWhatsAppLink("628123456789", "John");
+  document.getElementById("wa").href = waLink;
+</script>
+</body>
+</html>

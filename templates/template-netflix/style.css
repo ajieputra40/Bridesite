@@ -1,0 +1,321 @@
+:root {
+  --netflix-red: #e50914;
+  --netflix-black: #141414;
+  --netflix-dark-gray: #181818;
+  --netflix-light-gray: #b3b3b3;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--netflix-black);
+  color: #fff;
+  margin: 0;
+  overflow-x: hidden;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.netflix-container {
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: var(--netflix-black);
+  position: relative;
+  box-shadow: 0 0 100px rgba(0, 0, 0, 0.8);
+}
+
+#introLayer {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.n-animation {
+  font-size: 8rem;
+  font-weight: 900;
+  color: var(--netflix-red);
+  animation: zoomOut 1.5s forwards ease-in;
+  text-shadow: 0 0 20px rgba(229, 9, 20, 0.5);
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+    filter: blur(0);
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 1;
+    filter: blur(2px);
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+    filter: blur(10px);
+    visibility: hidden;
+  }
+}
+
+#profileOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background-color: var(--netflix-black);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+#profileOverlay:not(.hidden) .profile-card,
+#profileOverlay:not(.hidden) h1,
+#profileOverlay:not(.hidden) button {
+  animation: overlayFadeUp 0.5s ease both;
+}
+
+#profileOverlay:not(.hidden) .profile-card {
+  animation-delay: 0.1s;
+}
+
+#profileOverlay:not(.hidden) button {
+  animation-delay: 0.2s;
+}
+
+.profile-card {
+  width: 110px;
+  cursor: pointer;
+}
+
+.profile-img {
+  width: 100%;
+  border-radius: 4px;
+  transition: border 0.2s ease;
+  border: 3px solid transparent;
+}
+
+.profile-card:active .profile-img {
+  border-color: #fff;
+  transform: scale(0.95);
+}
+
+.billboard {
+  height: 70vh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.billboard-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, var(--netflix-black) 0%, transparent 50%),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, transparent 30%);
+}
+
+.n-logo-small {
+  color: var(--netflix-red);
+  font-weight: 900;
+  font-size: 2.2rem;
+}
+
+.btn-play {
+  background-color: #fff;
+  color: #000;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.btn-more {
+  background-color: rgba(109, 109, 110, 0.7);
+  color: #fff;
+  padding: 10px 24px;
+  border-radius: 4px;
+  font-weight: 900;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex: 1;
+}
+
+.top10-badge {
+  background: transparent;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 8px;
+}
+
+.top10-rank {
+  font-size: 24px;
+  font-weight: 900;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 1px #fff;
+}
+
+.row-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 15px 0;
+  scrollbar-width: none;
+  padding-left: 20px;
+}
+
+.row-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.thumbnail-container {
+  min-width: 140px;
+  position: relative;
+  transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.thumbnail-container:active {
+  transform: scale(0.9);
+}
+
+.thumbnail {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.thumbnail-landscape {
+  min-width: 240px;
+  aspect-ratio: 16 / 9;
+}
+
+.countdown-timer {
+  background: #222;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 8px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.countdown-timer::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  background: var(--netflix-red);
+  width: 100%;
+}
+
+.toast {
+  position: fixed;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(229, 9, 20, 0.9);
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-weight: bold;
+  font-size: 14px;
+  opacity: 0;
+  z-index: 3000;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.row-container {
+  position: relative;
+}
+
+.row-container::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 40px;
+  background: linear-gradient(to left, var(--netflix-black), transparent);
+  pointer-events: none;
+}
+
+.genre-list {
+  font-size: 10px;
+  color: var(--netflix-light-gray);
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.genre-dot {
+  width: 3px;
+  height: 3px;
+  background: #555;
+  border-radius: 50%;
+}
+
+.map-frame {
+  border: 1px solid #333;
+  filter: grayscale(1) invert(0.9) brightness(0.8);
+}
+
+.reveal-on-enter {
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  filter: blur(6px);
+}
+
+.reveal-on-enter.is-visible {
+  animation: revealUp 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+@keyframes overlayFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes revealUp {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.98);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal-on-enter,
+  .reveal-on-enter.is-visible {
+    animation: none;
+    opacity: 1;
+    transform: none;
+    filter: none;
+  }
+}

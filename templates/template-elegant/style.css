@@ -1,0 +1,11 @@
+body {
+  margin: 0;
+  background: url('assets/bg.jpg') center/cover;
+  color: white;
+  text-align: center;
+}
+
+.overlay {
+  background: rgba(0,0,0,0.5);
+  padding: 100px;
+}

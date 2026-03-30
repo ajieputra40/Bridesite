@@ -1,0 +1,18 @@
+body {
+  font-family: Arial;
+  text-align: center;
+  background: #fdf6f0;
+}
+
+.hero {
+  margin-top: 100px;
+}
+
+#wa {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: green;
+  color: white;
+  text-decoration: none;
+}

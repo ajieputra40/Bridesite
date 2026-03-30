@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1600" viewBox="0 0 1200 1600" role="img" aria-label="Local wedding photo placeholder">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2f1f17"/>
+      <stop offset="100%" stop-color="#8f6a52"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="1600" fill="url(#g)"/>
+  <circle cx="600" cy="560" r="220" fill="rgba(255,255,255,0.12)"/>
+  <rect x="250" y="930" width="700" height="360" rx="24" fill="rgba(255,255,255,0.10)"/>
+  <text x="600" y="1040" text-anchor="middle" fill="#fff" font-size="68" font-family="Georgia, serif">Nanda &amp; Ayu</text>
+  <text x="600" y="1115" text-anchor="middle" fill="#f3e7de" font-size="34" font-family="Arial, sans-serif">Local Image Placeholder</text>
+  <text x="600" y="1170" text-anchor="middle" fill="#f3e7de" font-size="28" font-family="Arial, sans-serif">template-motion-art-1</text>
+</svg>
