@@ -1,0 +1,111 @@
+.elementor-form-fields-wrapper {
+  font-size: 0.8rem !important;
+  font-family: "Metropolis", Sans-Serif;
+}
+
+.elementor-message-danger,
+.elementor-message-success {
+  display: none !important;
+}
+
+.noticeConfirm {
+  display: none;
+  font-size: 14px;
+  line-height: 1.6em;
+  font-family: "Metropolis", Sans-Serif;
+  color: red;
+  font-weight: 400;
+  margin-top: 12px;
+  margin-left: 12px;
+  margin-bottom: 12px;
+}
+
+.noticeSuccess {
+  display: none;
+  font-size: 14px;
+  line-height: 1.6em;
+  font-family: "Metropolis", Sans-Serif;
+  font-weight: 600;
+  margin-top: -2px;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.rsvp-data-container {
+  background-color: #00000000;
+  border: none;
+  border-radius: 0;
+  padding: 0;
+  max-height: 60vh;
+  overflow-y: auto;
+}
+
+#rsvp-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.rsvp-page-btn {
+  background: none;
+  border: 1px solid #ffffff50;
+  border-radius: 4px;
+  padding: 4px 12px;
+  cursor: pointer;
+  font-size: small;
+  color: #ffffff;
+}
+
+.rsvp-page-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.rsvp-page-info {
+  font-size: small;
+  color: #ffffff80;
+}
+
+.comment {
+  border-bottom: 1px solid #ffffff50;
+  padding: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.name {
+  color: #ffffff;
+  font-family: "Metropolis", Sans-Serif;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 1.4em;
+  word-spacing: 0.2px;
+}
+
+.text {
+  color: #ffffff;
+  font-family: "Metropolis", Sans-Serif;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.4em;
+  letter-spacing: 0.2px;
+}
+
+.time {
+  font-family: "Metropolis", Sans-Serif;
+  font-style: italic;
+  font-size: 10px;
+  color: #ffffff50;
+}
+
+.rsvp-empty-state {
+  font-family: "Metropolis", Sans-Serif;
+  font-size: 14px;
+  font-style: italic;
+  color: #ffffff50;
+  text-align: center;
+  padding: 24px 0;
+}
