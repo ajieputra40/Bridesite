@@ -780,7 +780,7 @@ var ytVideoPlayer;
 var musicVideoID = "";
 var videoVideoID = "";
 var mp3Url = "";
-var musicYoutubeUrl = "https://www.youtube.com/watch?v=bRBzj1Sqvk4";
+var musicYoutubeUrl = "https://www.youtube.com/watch?v=l3FV7pnTNeo";
 var videoYoutubeUrl = "";
 var isMusicReady = false;
 var isMusicPlaying = false;
@@ -879,19 +879,23 @@ return parseInt(t) || 0;
 if (params.get('mode') == "preview") {
 return;
 }playMusic();
-})$("#desktopcoverbutton").on("click touch", function () {
+});
+$("#desktopcoverbutton").on("click touch", function () {
 if (params.get('mode') == "preview") {
 return;
 }playMusic();
-})$("#mobilecoverbutton").on("click touch", function () {
+});
+$("#mobilecoverbutton").on("click touch", function () {
 if (params.get('mode') == "preview") {
 return;
 }playMusic();
-})$("#music-button").on("click touch", function () {
+});
+$("#music-button").on("click touch", function () {
 if (params.get('mode') == "preview") {
 return;
 }toggleMusic();
-})function playMusic() {
+});
+function playMusic() {
 if (usingMp3) {
 if (!mp3Url) {
 return;
