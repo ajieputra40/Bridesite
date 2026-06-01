@@ -31,6 +31,7 @@ jobs:
           mkdir -p dist
           cp -R clients/* dist/
           cp -R shared dist/shared
+          cp -R templates dist/templates
           cp CNAME dist/CNAME
 
       - name: Setup Pages
