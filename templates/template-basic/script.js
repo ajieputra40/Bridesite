@@ -1,5 +1,5 @@
 const data = {
-  couple: "Andi & Sari",
+  couple: "Groom & Bride",
   date: "20 December 2026",
   venue: "Jakarta",
   wa: "628123456789"

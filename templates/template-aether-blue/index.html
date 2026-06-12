@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aether Blue | bridesite.id Template</title>
+  <meta name="description" content="Local bridesite.id wedding invitation template preview for Groom & Bride.">
+  <link rel="icon" href="../../shared/logo.png">
+  <link rel="apple-touch-icon" href="../../shared/logo.png">
+  <style>
+    :root {
+      --accent: #5d82b8;
+      --bg-1: #eaf2fb;
+      --bg-2: #adc6e8;
+      --ink: #211a16;
+      --paper: rgba(255, 250, 243, 0.86);
+      --line: rgba(33, 26, 22, 0.16);
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      color: var(--ink);
+      font-family: Georgia, 'Times New Roman', serif;
+      background:
+        radial-gradient(circle at 18% 18%, rgba(255,255,255,0.66), transparent 24rem),
+        radial-gradient(circle at 82% 12%, color-mix(in srgb, var(--accent) 34%, transparent), transparent 22rem),
+        linear-gradient(135deg, var(--bg-1), var(--bg-2));
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: "air";
+      position: fixed;
+      inset: auto -2rem -4rem auto;
+      color: rgba(255, 255, 255, 0.34);
+      font-size: min(42vw, 340px);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .page {
+      width: min(900px, calc(100% - 32px));
+      min-height: 100vh;
+      margin: 0 auto;
+      display: grid;
+      place-items: center;
+      padding: 28px 0;
+    }
+
+    .card {
+      width: min(520px, 100%);
+      min-height: 720px;
+      border: 1px solid var(--line);
+      border-radius: 42px;
+      background: var(--paper);
+      box-shadow: 0 34px 120px rgba(33, 26, 22, 0.2);
+      overflow: hidden;
+      backdrop-filter: blur(18px);
+    }
+
+    .hero {
+      position: relative;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 34px;
+      background:
+        linear-gradient(180deg, rgba(33,26,22,0.06), rgba(33,26,22,0.72)),
+        radial-gradient(circle at 50% 22%, rgba(255,255,255,0.72), transparent 14rem),
+        linear-gradient(135deg, color-mix(in srgb, var(--accent) 28%, #fff), color-mix(in srgb, var(--accent) 70%, #3a2b23));
+      color: #fffaf3;
+    }
+
+    .brand {
+      position: absolute;
+      top: 24px;
+      left: 28px;
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand img {
+      width: 30px;
+      height: 30px;
+      object-fit: contain;
+      border-radius: 9px;
+      background: rgba(255,255,255,0.66);
+      padding: 5px;
+    }
+
+    .template-label {
+      margin: 0 0 14px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.78;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(54px, 13vw, 92px);
+      line-height: 0.84;
+      letter-spacing: -0.075em;
+      text-wrap: balance;
+    }
+
+    .content {
+      padding: 34px;
+    }
+
+    .mood {
+      margin: 0 0 24px;
+      color: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .names {
+      display: grid;
+      gap: 18px;
+      margin-bottom: 28px;
+    }
+
+    .person {
+      border-left: 3px solid var(--accent);
+      padding-left: 16px;
+    }
+
+    .person strong {
+      display: block;
+      font-size: 26px;
+      letter-spacing: -0.04em;
+    }
+
+    .person span {
+      color: rgba(33, 26, 22, 0.62);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+    }
+
+    .details {
+      border-top: 1px solid var(--line);
+      padding-top: 24px;
+      display: grid;
+      gap: 12px;
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .button {
+      display: inline-flex;
+      width: fit-content;
+      margin-top: 20px;
+      border-radius: 999px;
+      padding: 13px 18px;
+      color: #fffaf3;
+      background: var(--accent);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      text-decoration: none;
+    }
+
+    @media (max-width: 560px) {
+      .card { min-height: 680px; border-radius: 30px; }
+      .hero { min-height: 360px; padding: 28px; }
+      .content { padding: 28px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <article class="card" aria-label="Aether Blue wedding invitation template preview">
+      <section class="hero">
+        <a class="brand" href="../../">
+          <img src="../../shared/logo.png" alt="bridesite.id logo">
+          <span>bridesite.id</span>
+        </a>
+        <p class="template-label">Aether Blue Template</p>
+        <h1>Groom<br>&amp; Bride</h1>
+      </section>
+      <section class="content">
+        <p class="mood">Fresh • Airy • Breezy</p>
+        <div class="names">
+          <div class="person">
+            <strong>Groom Name</strong>
+            <span>Son of Mr. Groom Father &amp; Mrs. Groom Mother</span>
+          </div>
+          <div class="person">
+            <strong>Bride Name</strong>
+            <span>Daughter of Mr. Bride Father &amp; Mrs. Bride Mother</span>
+          </div>
+        </div>
+        <div class="details">
+          <div><strong>Saturday, 20 December 2026</strong></div>
+          <div>Akad Ceremony: 15.30 - 17.30 WIB</div>
+          <div>Reception: 18.30 - 20.30 WIB</div>
+          <div>Venue: Bridesite Hall, Bandung</div>
+        </div>
+        <a class="button" href="?name=Guest">Open Dummy Invitation</a>
+      </section>
+    </article>
+  </main>
+</body>
+</html>

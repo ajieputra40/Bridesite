@@ -1,6 +1,6 @@
 const defaultInvitationData = {
-  title: "Bride & Groom | A Love Story Premiere",
-  coupleName: "BRIDE & GROOM",
+  title: "Groom & Bride | A Love Story Premiere",
+  coupleName: "GROOM & BRIDE",
   headlineTag: "#1 Wedding Invitation Today",
   dateLabel: "2027 | U/A 16+ | Season 1",
   description:
