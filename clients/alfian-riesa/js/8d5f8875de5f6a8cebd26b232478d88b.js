@@ -181,7 +181,10 @@ $(document).ready(function () {
             return {
               name: d.name || "Guest",
               text: d.text || "",
-              created_at: d.created_at && d.created_at.toDate ? d.created_at.toDate().toISOString() : new Date().toISOString()
+              created_at: d.created_at && d.created_at.toDate ? d.created_at.toDate().toISOString() : new Date().toISOString(),
+              status: d.status || "",
+              guest_count: d.guest_count,
+              phone: d.phone || ""
             };
           })
           .sort(function (a, b) {
@@ -217,8 +220,31 @@ $(document).ready(function () {
       var commentDiv = $("<div>").addClass("comment");
       var nameSpan = $("<span>").addClass("name").text(comment.name);
       var textSpan = $("<span>").addClass("text").text(comment.text);
+
+      // Add attendance status if available
+      var statusHtml = "";
+      if (comment.status && comment.status !== "") {
+        var statusText = "";
+        if (comment.status === "accepted" || comment.status === "Accepted" || comment.status === "yes" || comment.status === "Yes" || comment.status === "Y" || comment.status === "ya" || comment.status === "Ya") {
+          statusText = language === "en" ? "Attending" : "Hadir";
+        } else if (comment.status === "declined" || comment.status === "Declined" || comment.status === "no" || comment.status === "No" || comment.status === "N" || comment.status === "tidak" || comment.status === "Tidak") {
+          statusText = language === "en" ? "Not Attending" : "Tidak Hadir";
+        } else if (comment.status === "maybe" || comment.status === "Maybe" || comment.status === "mungkin" || comment.status === "Mungkin") {
+          statusText = language === "en" ? "Maybe" : "Mungkin";
+        } else {
+          statusText = comment.status;
+        }
+        statusHtml = $("<span>").addClass("rsvp-status").text(" (" + statusText + ")");
+      }
+
+      // Add guest count if available
+      var guestCountHtml = "";
+      if (comment.guest_count !== null && comment.guest_count !== undefined && comment.guest_count > 0) {
+        guestCountHtml = $("<span>").addClass("guest-count").text(" (+" + comment.guest_count + " guest" + (comment.guest_count > 1 ? "s" : "") + ")");
+      }
+
       var timeSpan = $("<span>").addClass("time").text(formatTimeAgo(comment.created_at));
-      commentDiv.append(nameSpan, textSpan, timeSpan);
+      commentDiv.append(nameSpan, statusHtml, guestCountHtml, textSpan, timeSpan);
       commentContainer.append(commentDiv);
     });
 

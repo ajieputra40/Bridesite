@@ -109,3 +109,16 @@
   text-align: center;
   padding: 24px 0;
 }
+
+.rsvp-status {
+  font-size: 12px;
+  font-style: italic;
+  margin-left: 8px;
+  color: #ffffff80;
+}
+
+.guest-count {
+  font-size: 12px;
+  margin-left: 8px;
+  color: #ffffff80;
+}
